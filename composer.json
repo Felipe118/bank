@@ -1,0 +1,28 @@
+{
+    "name": "sn-393141/nusbank",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Sn393141\\Nusbank\\": "App/"
+        }
+    },
+    "authors": [
+        {
+            "name": "luis.beserra",
+            "email": "luis.beserra@sc.senai.br"
+        }
+    ],
+    "require-dev": {
+        "pestphp/pest": "^2.28",
+        "symfony/var-dumper": "^7.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.6",
+        "php-di/php-di": "^7.0"
+    }
+}

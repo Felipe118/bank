@@ -4,6 +4,11 @@ namespace App\Domain\Conta\Repository;
 
 class ContaRepository
 {
+    public function __construct(
+        private \PDO $connection
+    ) {}
+
+    
     // // TODO: Implement the methods for account repository
 
     // public function getById(int $id): ?Conta

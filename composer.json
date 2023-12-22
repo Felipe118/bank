@@ -1,9 +1,9 @@
 {
-    "name": "sn-393141/nusbank",
+    "name": "teste/nusbank",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Sn393141\\Nusbank\\": "App/"
+            "App\\": "app/"
         }
     },
     "authors": [

@@ -8,7 +8,7 @@ use App\Domain\Conta\Entity\Pessoa;
 
 interface PessoaRepositoryInterface
 {
-    public function insert(Pessoa $pessoa) :void;
+    public function teste() ;
     // public function update(array $dados) :void;
     //public function abrirConta() :void;
 }

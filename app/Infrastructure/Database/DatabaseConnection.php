@@ -11,13 +11,20 @@ class DatabaseConnection
     public static function connect()
     {
         try{
-            $dotenv = Dotenv::createImmutable(__DIR__)->load();
-            $database = $_ENV['DB_DATABASE'];
+            $dotenvPath = __DIR__ . '/../../../';
+            $dotenv = Dotenv::createImmutable($dotenvPath)->load();
+            //dd($dotenv);
+
+            $database = 'postgres';
             $host = $_ENV['DB_HOST'];
-            $dsn = "pgsql:dbname=$database;host=$host";
-            return new \PDO($dsn, getenv('DB_USER'), getenv('DB_PASS'));
+            $user = $_ENV['DB_USERNAME'];
+            $pass = $_ENV['DB_PASSWORD'];
+
+            $dsn = "pgsql:host=$host;dbname=$database;port=5433;user=$user;password=$pass";
+        
+            return new \PDO($dsn);
         }catch(\PDOException $e){
-            echo $e->getMessage();
+            echo  'ERRO '.$e->getMessage();
         }
        
     }

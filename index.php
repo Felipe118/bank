@@ -6,6 +6,3 @@ use App\Infrastructure\Database\DatabaseConnection;
 
 $database = new DatabaseConnection();
 $conn = $database::connect();
-
-// $pessoa = new PessoaRepository($conn);
-// $pessoa->teste();

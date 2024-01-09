@@ -12,6 +12,7 @@ class Pessoa
         private string $nome,
         private string $email,
         private string $senha,
+        private string $dataNascimento,
         private string $dataCriacao = new \DateTimeImmutable(),
     ) {}
 

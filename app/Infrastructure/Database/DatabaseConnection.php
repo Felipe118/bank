@@ -15,12 +15,14 @@ class DatabaseConnection
             $dotenv = Dotenv::createImmutable($dotenvPath)->load();
             //dd($dotenv);
 
-            $database = 'postgres';
+            $database = $_ENV['DB_DATABASE'] ;
             $host = $_ENV['DB_HOST'];
             $user = $_ENV['DB_USERNAME'];
             $pass = $_ENV['DB_PASSWORD'];
 
             $dsn = "pgsql:host=$host;dbname=$database;port=5433;user=$user;password=$pass";
+
+            //dd('conectou');
         
             return new \PDO($dsn);
         }catch(\PDOException $e){

@@ -15,6 +15,7 @@ class Conta
         private TipoContaEnum $tipoConta,
         private float $saldo = 0.0,
         private string $dataCriacao = new \DateTimeImmutable(),
+        private string $cpfPessoa
     ) {}
 
         
